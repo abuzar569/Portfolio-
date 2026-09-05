@@ -7,6 +7,8 @@ import LoadingScreen from "@/components/LoadingScreen";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import ScrollProgress from "@/components/ScrollProgress";
+import About from "@/components/About";
+import Photography from "@/components/Photography";
 
 export default function Home() {
   const [loaded, setLoaded] = useState(false);
@@ -19,6 +21,8 @@ export default function Home() {
         {!loaded && <LoadingScreen onComplete={() => setLoaded(true)} />}
         <Navbar />
         <Hero ready={loaded} />
+        <About />
+        <Photography />
       </main>
     </SmoothScroll>
   );
